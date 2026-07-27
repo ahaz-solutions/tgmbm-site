@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TGMB Law Office | Home</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        /* ==========================================================
+           ABOUT SECTION – FIXED
+           ========================================================== */
+        .about-section {
+            padding: 80px 0;
+            background: #f4f6fa;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-left {
+            background: #e8ecf2;
+            min-height: 320px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-spacer {
+            height: 100%;
+            min-height: 320px;
+            width: 100%;
+        }
+
+        .about-right {
+            padding: 10px 0;
+        }
+
+        .about-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 2.4rem;
+            color: #0a1628;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        .about-text {
+            color: #444;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+        .about-text strong {
+            color: #1e1e2a;
+        }
+
+        .about-signature img {
+            max-width: 200px;
+            margin-top: 10px;
+        }
+
+        /* ==========================================================
+           RESPONSIVE
+           ========================================================== */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .about-left {
+                min-height: 200px;
+            }
+            .about-spacer {
+                min-height: 200px;
+            }
+            .about-title {
+                font-size: 2rem;
+            }
+            .about-signature {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-section {
+                padding: 50px 0;
+            }
+            .about-title {
+                font-size: 1.6rem;
+            }
+            .about-text {
+                font-size: 0.95rem;
+            }
+            .about-left {
+                min-height: 140px;
+            }
+            .about-spacer {
+                min-height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page" class="site header-style-two">
+
+        <!-- ==========================================================
+        HEADER
+        ========================================================== -->
+        <header class="header-area site-header">
+            <div class="main-menu-area">
+                <div class="menu-container-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-4 col-7 logo-column">
+                                <div class="site-branding">
+                                    <div class="logo-wrap">
+                                        <a href="https://tgmblawoffice.com/" class="custom-logo-link">
+                                            <img src="https://tgmblawoffice.com/wp-content/uploads/2025/06/cropped-cropped-Logo-I-TGMB-04.png" alt="TGMB Law Office" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-10 col-sm-8 col-5 text-right">
+                                <div class="header-nav-and-buttons td-header-cta-enable">
+                                    <nav id="site-navigation" class="main-navigation td-ul-style">
+                                        <div class="main-menu-container">
+                                            <ul id="main-menu" class="menu">
+                                                <li class="menu-item"><a href="index.html" class="active">HOME</a></li>
+                                                <li class="menu-item"><a href="about.html">ABOUT US</a></li>
+                                                <li class="menu-item"><a href="services.html">SERVICES</a></li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+
+                                    <div class="header-buttons-area text-right">
+                                        <div class="header-buttons-wrapper">
+                                            <ul class="td-ul-style">
+                                                <li class="header-cta-button">
+                                                    <a class="td_button td_header_cta" href="#contact">CONTACT US</a>
+                                                </li>
+                                                <li class="mobile-menu-trigger" id="menuToggle">
+                                                    <span></span><span></span><span></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==========================================================
+        HERO
+        ========================================================== -->
+        <section class="hero" id="hero">
+            <div class="hero-background" style="background-image: url('https://tgmblawoffice.com/wp-content/uploads/2025/04/photo_2025-04-01_19-41-19.jpg');">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="bdt-prime-slider-wrapper">
+                <div class="bdt-prime-slider-content">
+                    <div class="bdt-prime-slider-desc">
+                        <h1 class="bdt-title-tag">YOUR TRUSTED PARTNER IN ETHIOPIA</h1>
+                        <div class="bdt-btn-wrapper">
+                            <a href="#about" class="bdt-slide-btn">
+                                <span class="bdt-prime-slider-button-text">
+                                    Learn More
+                                    <span class="bdt-slide-btn-icon">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bdt-scroll-down-wrapper">
+                <a href="#about" class="bdt-scroll-down">
+                    <span class="bdt-scroll-icon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="24" height="24">
+                            <polygon points="31,0 31,60.586 23.707,53.293 22.293,54.854 31.293,64 32.707,64 41.707,54.854 40.293,53.366 33,60.586 33,0" fill="rgba(255,255,255,0.6)" />
+                        </svg>
+                    </span>
+                    <span class="bdt-scroll-down-text">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ==========================================================
+        ABOUT (FIXED – properly styled)
+        ========================================================== -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-grid">
+
+                    <!-- Left Column: Image/Spacer -->
+                    <div class="about-left">
+                        <div class="about-spacer"></div>
+                        <img src="../home tgmbm.png" alt="TGM law office"/>
+                    </div>
+
+                    <!-- Right Column: Text Content -->
+                    <div class="about-right">
+                        <h2 class="about-title">HONORING TRADITION, EMPOWERING PROGRESS</h2>
+                        <div class="about-text">
+                            <span style="font-size:16px;">
+                                Based in Addis Ababa, <strong>TESHOME GABRE-MARIAM BOKAN </strong><strong><span style="font-size:12px;">METASEBIA</span></strong> provides a full range of legal and consultancy services in connection with corporate, business, and investments in Ethiopia. Recently, we have expanded our offerings to include tax and financial consultancy services. This allows our clients to benefit from a comprehensive, one-stop compliance solution covering corporate governance, taxation, and financial advisory needs.
+                                <br><br>
+                                Legal services are rendered by Ms. Wossen Bokan and other lawyers retained by the Firm, all individually registered and licensed in accordance with the laws of Ethiopia.
+                                <br><br>
+                                This Consultancy Firm is named after Mr. Teshome Gabre-Mariam Bokan under whom the Managing Director, Wossen Bokan, has been trained as a lawyer for over a decade. Teshome was a leading and internationally recognised Ethiopian lawyer who also happened to be the first Attorney General of Ethiopia under Emperor Haile-Selassie. Teshome was a prominent figure and passionate lover of Ethiopia. He is also the father of the Managing Director.
+                            </span>
+                        </div>
+                        <div class="about-signature">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2024/07/signature.png" alt="Signature" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================
+        WHAT WE DO (Services)
+        ========================================================== -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">What We Do</span>
+                    <h2 class="section-title">LET OUR EXPERTISE BE YOUR GUIDE</h2>
+                </div>
+
+                <div class="services-image-box">
+                    <img src="https://tgmblawoffice.com/wp-content/uploads/elementor/thumbs/photo_2019-12-24_16-29-40-r3c3snu10k2tofl5ephbx9mnvm3g3wxp56ufkyo1lm.jpg" alt="TGMB Team" />
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2025/06/justice-svgrepo-com2.png" alt="Corporate Icon" />
+                        </div>
+                        <h3>CORPORATE</h3>
+                        <p>Ethiopia has become one of the fastest growing economies in Africa, attracting major levels of foreign investments. We provide end-to-end support for foreign investors and companies looking to establish a presence in Ethiopia, whether through a branch, subsidiary, representative office, or as international contractors or subcontractors. Our services cover company registration, legal compliance, and ongoing operational supports.</p>
+                        <a href="#" class="service-btn">Learn more</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/png-transparent-document-file-menu-page-paper-documents-icon.png" alt="Tax Icon" />
+                        </div>
+                        <h3>TAX &amp; COMPLIANCE</h3>
+                        <p>We offer integrated legal support along with tax and finance, serving as a full-solution partner for our clients. Our services cover entry assessments for new investors, ongoing tax compliance advisory, as well as bookkeeping, financial reporting, and regulatory support. We help businesses navigate Ethiopian tax and financial regulations with confidence, ensuring they stay compliant, operate efficiently, and are positioned for sustainable growth.</p>
+                        <a href="#" class="service-btn">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================
+        TEAM
+        ========================================================== -->
+        <section class="team-section" id="team">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" style="font-size:2.2rem; margin-bottom:0;">Meet Our Team</h2>
+                    <h2 class="section-title" style="font-size:1.8rem; margin-top:-6px;">Our Lawyers</h2>
+                </div>
+
+                <!-- ROW 1: Wossen -->
+                <div class="team-row team-row-full">
+                    <div class="team-card elementor-repeater-item-d94ca3d">
+                        <div class="profile-image-card ekit-team-img ekit-team-style-overlay_details text-center">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2025/08/photo_2025-08-03_21-15-14-1.jpg" alt="Wossen Teshome Bokan" />
+                            <div class="hover-area">
+                                <div class="profile-body">
+                                    <h2 class="profile-title"><a href="#" class="ekit-team-popup">WOSSEN TESHOME BOKAN</a></h2>
+                                    <p class="profile-designation">Managing Director</p>
+                                    <p class="profile-content">Wossen Teshome Bokan is a leading intellectual property and corporate lawyer with a law degree from the University of London and over 25 years of experience in the field. Wossen has also been trained under her late father, Mr. Teshome Gabre-Mariam Bokan, and worked with him for 13 years both as a corporate lawyer and leading his IP department. In 2012, she established her own boutique intellectual property firm which she has then merged with her father's firm, after his passing at the end of 2016, to create and manage this full-service law firm under TESHOME GABRE-MARIAM BOKAN Metasebia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 2: Tamrat + Tilahun -->
+                <div class="team-row team-row-two">
+                    <div class="team-card" id="tamrat-id">
+                        <div class="profile-image-card ekit-team-img ekit-team-style-overlay_details text-center">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2024/07/senior-attorny-1024x683.jpg" alt="Tamrat Taleget Tessema" />
+                            <div class="hover-area">
+                                <div class="profile-body">
+                                    <h2 class="profile-title"><a href="#" class="ekit-team-popup">TAMRAT TALEGET TESSEMA</a></h2>
+                                    <p class="profile-designation">Senior Attorney</p>
+                                    <p class="profile-content">Tamrat Talegeta Tessema (PhD) is an Assistant Professor of Law of Arsi University in Ethiopia and practices corporate law in general. His main practice areas include Merger and Acquisition, litigation, tax administration, banking and insurance. Tamrat holds a PhD from Seoul National University, with an LLB and LLM from Addis Ababa University.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="profile-image-card ekit-team-img ekit-team-style-overlay_details text-center">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2024/07/litigation-lawyeer-e1746116012445.jpg" alt="Tilahun Mitiku Tesfaye" />
+                            <div class="hover-area">
+                                <div class="profile-body">
+                                    <h2 class="profile-title"><a href="#" class="ekit-team-popup">TILAHUN MITIKU TESFAYE</a></h2>
+                                    <p class="profile-designation">SENIOR Litigation Lawyer</p>
+                                    <p class="profile-content">Tilahun Mitiku Tesfaye is the firm's leading litigation lawyer with an LLB and LLM from Addis Ababa University. Tilahun served as a presiding judge in civil, commercial, labour and penal divisions of the Federal Court of Ethiopia before he started private practice over 20 years ago. Other than litigation, Tilahun is also an astute corporate lawyer with deep understanding of commercial principles and practical implications of legal advice.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3: Gemechu + Ruth -->
+                <div class="team-row team-row-two">
+                    <div class="team-card">
+                        <div class="profile-image-card ekit-team-img ekit-team-style-overlay_details text-center">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2024/07/corporate-lawyer.jpg" alt="Gemechu Merera Fana" />
+                            <div class="hover-area">
+                                <div class="profile-body">
+                                    <h2 class="profile-title"><a href="#" class="ekit-team-popup">GEMECHU MERERA FANA</a></h2>
+                                    <p class="profile-designation">Corporate Lawyer</p>
+                                    <p class="profile-content">Gemechu Merera Fana is the firm's leading corporate lawyer, recognized for his deep expertise in corporate transactions, litigation, and regulatory matters. Prior to starting private practice, Gemechu served as a public prosecutor and a judge at the Federal Tax Appeal Commission, bringing valuable government and judicial experience to his corporate advisory work.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card" id="ruth-id">
+                        <div class="profile-image-card ekit-team-img ekit-team-style-overlay_details text-center">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2024/07/cosultant-e1746115980244-1024x682.jpg" alt="Ruth Gizachew Guyasa" />
+                            <div class="hover-area">
+                                <div class="profile-body">
+                                    <h2 class="profile-title"><a href="#" class="ekit-team-popup">RUTH GIZACHEW GUYASA</a></h2>
+                                    <p class="profile-designation">Consultant</p>
+                                    <p class="profile-content">Ruth Gizachew Guyasa is a consultant handling and overseeing assignments in corporate, tax, mergers and acquisition matters of the Firm. Ruth holds a degree in Political Science from the University of Colorado, Denver and a Juris Doctor from University of Pittsburg, with a Certificate of Advance Study in International and Comparative Law.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 4: Daniel + Tigist -->
+                <div class="team-row team-row-two">
+                    <div class="team-card">
+                        <div class="profile-image-card ekit-team-img ekit-team-style-overlay_details text-center">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2024/07/lawyerB.jpg" alt="Daniel Tariku Tamiru" />
+                            <div class="hover-area">
+                                <div class="profile-body">
+                                    <h2 class="profile-title"><a href="#" class="ekit-team-popup">DANIEL TARIKU TAMIRU</a></h2>
+                                    <p class="profile-designation">SENIOR ASSOCIATE</p>
+                                    <p class="profile-content">Daniel Tariku Tamiru is a lawyer at the Firm, holding an LLB and an LLM in Business Law from the School of Law and Governance Studies, Addis Ababa University. Daniel, although an expert in intellectual property law, works full-time with both Corporate and Investment, and Intellectual Property departments of the Firm.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="profile-image-card ekit-team-img ekit-team-style-overlay_details text-center">
+                            <img src="https://tgmblawoffice.com/wp-content/uploads/2025/06/photo_2_2025-06-14_23-55-28-e1749934902242.jpg" alt="Tigist Dancha Tenecha" />
+                            <div class="hover-area">
+                                <div class="profile-body">
+                                    <h2 class="profile-title"><a href="#" class="ekit-team-popup">TIGIST DANCHA TENECHA</a></h2>
+                                    <p class="profile-designation">Associate Lawyer</p>
+                                    <p class="profile-content">Tigist Dancha Tenecha is a lawyer at the Firm, holding an LLB from Addis Ababa University, School of Law and an MBA from Yardstick International College. Ms. Dancha is primarily dedicated to the Intellectual Property wing of the Firm; but also performs assignments and research in general under the laws of Ethiopia, to the corporate side.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-cta-wrapper">
+                    <a href="about.html" class="btn-team-cta">Meet The Team</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================
+        WHY CHOOSE US
+        ========================================================== -->
+        <section class="why-us-section" id="why-us">
+            <div class="container">
+                <div class="why-grid-3col">
+                    <div class="why-text-col">
+                        <span class="section-tag">WHY CHOOSE US</span>
+                        <h2 class="why-main-title">Our Expertise, Your Advantage</h2>
+                        <p class="why-description">
+                            Leverage our decades of experience and local insight to navigate the complexities of business and investment in Ethiopia seamlessly.
+                        </p>
+                    </div>
+
+                    <div class="why-icons-col">
+                        <div class="why-item">
+                            <div class="why-icon"><i class="fas fa-star"></i></div>
+                            <h3>Expertise</h3>
+                            <p>With decades of experience and a deep understanding of Ethiopian law, we provide expert guidance on all aspects of business and investment in Ethiopia.</p>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-icon"><i class="fas fa-award"></i></div>
+                            <h3>Reputation</h3>
+                            <p>Renowned for our integrity and professionalism, our firm has earned a strong reputation both locally and internationally for delivering exceptional legal services.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-icons-col">
+                        <div class="why-item">
+                            <div class="why-icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Commitment</h3>
+                            <p>Our team is fully committed to ensuring your business thrives, offering tailored solutions and a hands-on approach every step of the way.</p>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-icon"><i class="fas fa-compass"></i></div>
+                            <h3>Guidance</h3>
+                            <p>We offer strategic advice and ongoing support, helping you navigate complex legal landscapes with confidence and clarity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- ===== FOOTER INJECTION POINT ===== -->
+    <div id="footer-container"></div>
+
+    </div><!-- #page -->
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

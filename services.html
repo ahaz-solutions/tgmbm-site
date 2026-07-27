@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services – TGMB Law Office</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Main Styles (shared) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        /* ==========================================================
+           SERVICES PAGE – ALL STYLES
+           ========================================================== */
+
+        .services-content-area {
+            padding: 40px 0;
+        }
+
+        /* ---- Section Header ---- */
+        .services-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .services-header .subtitle {
+            color: #3e74a1;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+        .services-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #0a1628;
+            margin-top: 0;
+        }
+
+        /* ---- Service Grid ---- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px 24px 28px;
+            text-align: center;
+            border: 1px solid #f0f0f5;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.07);
+            border-color: #3e74a1;
+        }
+
+        .service-card .service-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(62, 116, 161, 0.08);
+            border-radius: 50%;
+        }
+        .service-card .service-icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #0a1628;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ---- Main Areas of Practice ---- */
+        .main-areas-section {
+            background: #f4f6fa;
+            padding: 50px 0;
+            margin-bottom: 0;
+        }
+        .main-areas-section .container {
+            max-width: 1100px;
+        }
+
+        .main-areas-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .main-areas-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #0a1628;
+            margin-bottom: 18px;
+        }
+
+        .main-areas-text p {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .main-areas-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        /* ==========================================================
+           RESPONSIVE
+           ========================================================== */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .main-areas-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .main-areas-text {
+                order: 2;
+            }
+            .main-areas-image {
+                order: 1;
+            }
+            .services-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-content-area {
+                padding: 20px 0;
+            }
+            .service-card {
+                padding: 24px 16px 22px;
+            }
+            .main-areas-text h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id="page" class="site header-style-two">
+
+    <!-- ===== HEADER INJECTION POINT ===== -->
+    <div id="header-container"></div>
+
+    <!-- ==========================================================
+    SERVICES CONTENT
+    ========================================================== -->
+    <div id="primary" class="content-area page-content-area layout-full-width services-content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Section Header -->
+                    <div class="services-header">
+                        <h6 class="subtitle">Services We Provide</h6>
+                        <h1>Expert Legal Services Across Industries</h1>
+                    </div>
+
+                    <!-- Service Grid -->
+                    <div class="services-grid">
+
+                        <!-- 1. Foreign Investments & Joint Ventures -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/05/foreign-investment.png" alt="Foreign Investments" />
+                            </div>
+                            <h3>Foreign Investments &amp; Joint Ventures</h3>
+                            <p>Facilitating cross-border investments and partnerships with expert legal advice to ensure seamless international growth and collaboration.</p>
+                        </div>
+
+                        <!-- 2. Banking and Finance -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/5223830.png" alt="Banking and Finance" />
+                            </div>
+                            <h3>Banking and Finance</h3>
+                            <p>Offering expert legal counsel on banking regulations, financing solutions and transactions to ensure compliance and protect your financial interests.</p>
+                        </div>
+
+                        <!-- 3. Intellectual Property -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/05/intellectual-property.png" alt="Intellectual Property" />
+                            </div>
+                            <h3>Intellectual Property</h3>
+                            <p>Safeguarding your innovations, inventions, and creative works with comprehensive legal strategies to protect your intellectual assets.</p>
+                        </div>
+
+                        <!-- 4. Arbitration -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/arbitration-icon-1142571-512.png" alt="Arbitration" />
+                            </div>
+                            <h3>Arbitration</h3>
+                            <p>Providing efficient and effective dispute resolution through arbitration, ensuring fair outcomes while minimizing time and costs for all parties involved.</p>
+                        </div>
+
+                        <!-- 5. Energy & Natural Resources -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/energy.svg" alt="Energy" />
+                            </div>
+                            <h3>Energy &amp; Natural Resources</h3>
+                            <p>Offering expert legal guidance in the energy and natural resources sectors, helping clients navigate regulatory challenges and optimize their operations.</p>
+                        </div>
+
+                        <!-- 6. Construction -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/construction-law-1964739-1662031.png" alt="Construction" />
+                            </div>
+                            <h3>Construction</h3>
+                            <p>Providing legal expertise in construction projects, from contract negotiation to dispute resolution, ensuring smooth execution and compliance with industry standards.</p>
+                        </div>
+
+                        <!-- 7. Aviation -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/3502956-200.png" alt="Aviation" />
+                            </div>
+                            <h3>Aviation</h3>
+                            <p>Delivering specialized legal services in the aviation industry, covering everything from regulatory compliance to aircraft transactions and dispute resolution.</p>
+                        </div>
+
+                        <!-- 8. Insurance -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/images.png" alt="Insurance" />
+                            </div>
+                            <h3>Insurance</h3>
+                            <p>Offering comprehensive legal services in insurance, guiding clients through policy matters, claims disputes and regulatory compliance to ensure protection and risk management.</p>
+                        </div>
+
+                        <!-- 9. Hospitality -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/hospitality-icon-20.png" alt="Hospitality" />
+                            </div>
+                            <h3>Hospitality</h3>
+                            <p>Providing tailored legal solutions for the hospitality industry, covering everything from contracts and licensing to regulatory compliance and dispute resolution.</p>
+                        </div>
+
+                        <!-- 10. Industrial Relations & Employment -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="https://tgmblawoffice.com/wp-content/uploads/2025/07/png-clipart-employment-national-labor-relations-board-management-business-man-people-business-man.png" alt="Industrial Relations" />
+                            </div>
+                            <h3>Industrial Relations &amp; Employment</h3>
+                            <p>Providing expert legal counsel on employment law, workplace disputes, and industrial relations to ensure fair practices and compliance for both employers and employees.</p>
+                        </div>
+
+                    </div><!-- /services-grid -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================
+    MAIN AREAS OF PRACTICE
+    ========================================================== -->
+    <section class="main-areas-section">
+        <div class="container">
+            <div class="main-areas-wrapper">
+
+                <div class="main-areas-text">
+                    <h2>Main Areas of Practice</h2>
+                    <p>The Firm practices in areas such as international finance, joint ventures, commercial transactions, construction, investment, natural resources and energy, intellectual property, employment law, and international arbitration and local litigation.</p>
+                    <p>The Firm's well-developed practice has represented international organisations and corporate entities. We assist companies in all facets of corporate activities from formation of a company under local laws to advising corporate clients on labour, tax, banking and related corporate issues. We also assist in winding-up and deregistration of those companies that wish not to operate in Ethiopia anymore. For this, we have a selected team of lawyers each specialising in the relevant laws of Ethiopia.</p>
+                    <p>We further provide services in aviation matters particularly with foreign financiers and leasing companies where various entities have leased or bought aircraft, aircraft engines and other spare parts advising on lease, loan and security documents and assisting in the registration of aircraft and other relevant services with the Ethiopian Civil Aviation Authority.</p>
+                </div>
+
+                <div class="main-areas-image">
+                    <img src="https://tgmblawoffice.com/wp-content/uploads/2024/07/photo_2025-04-01_19-41-15-1024x682.jpg" alt="TGMB Team" />
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER INJECTION POINT ===== -->
+    <div id="footer-container"></div>
+
+</div><!-- #page -->
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

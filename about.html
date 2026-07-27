@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us – TGMB Law Office</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="http://tgmblawoffice.com/wp-content/plugins/themedraft-core/elementor-widgets/assets/fonts/flaticon.css" />
+
+    <!-- Main Styles (shared) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        /* ==========================================================
+           ABOUT PAGE – ALL STYLES (no inline CSS)
+           ========================================================== */
+
+        /* ---- Main content area ---- */
+        .about-content-area {
+            padding: 40px 0;
+        }
+
+        /* ---- Mission section ---- */
+        .mission-section {
+            margin-bottom: 40px;
+        }
+        .mission-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .mission-header .subtitle {
+            color: #3e74a1;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            margin-bottom: 0;
+        }
+        .mission-header .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 2rem;
+            margin-top: 0;
+            color: #0a1628;
+        }
+        .mission-icon-wrapper {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .mission-icon-wrapper img {
+            max-width: 60px;
+            margin-bottom: 12px;
+        }
+        .mission-icon-wrapper h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #0a1628;
+            margin-bottom: 8px;
+        }
+        .mission-icon-wrapper p {
+            color: #555;
+            font-size: 1rem;
+        }
+        .mission-text {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .mission-text p {
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+        .mission-signature {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .mission-signature img {
+            max-width: 160px;
+        }
+
+        /* ---- Legal Practice heading ---- */
+        .legal-practice-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .legal-practice-heading h6 {
+            color: #3e74a1;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+        .legal-practice-heading h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #0a1628;
+            margin-top: 0;
+            line-height: 1.3;
+        }
+
+        /* ---- Service Boxes ---- */
+        .td-single-service-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 24px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f5;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            min-height: 80px;
+        }
+        .td-single-service-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+        .service-box-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-box-icon img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            display: block;
+        }
+        /* Hide hexagon background */
+        .background-icon {
+            display: none !important;
+        }
+        .service-box-main-icon {
+            position: relative;
+            z-index: 1;
+        }
+        .service-content {
+            flex: 1;
+        }
+        .td-service-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #0a1628;
+            margin-bottom: 2px;
+        }
+        .service-desc p {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ---- Team Section ---- */
+        .team-section-compact {
+            background: #f4f6fa;
+            padding: 50px 0;
+        }
+        .team-section-compact .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0a1628;
+        }
+
+        .team-card-compact {
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f5;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .team-card-compact:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+        .team-card-compact .profile-image-card {
+            position: relative;
+            overflow: hidden;
+            background: #0a1628;
+        }
+        .team-card-compact .profile-image-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .team-card-compact:hover .profile-image-card img {
+            transform: scale(1.03);
+        }
+        .team-card-compact .hover-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 22, 40, 0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            padding: 16px;
+            text-align: center;
+        }
+        .team-card-compact:hover .hover-area {
+            opacity: 1;
+        }
+        .team-card-compact .profile-body {
+            max-height: 100%;
+            overflow-y: auto;
+            padding: 2px 0;
+        }
+        .team-card-compact .profile-body::-webkit-scrollbar {
+            width: 2px;
+        }
+        .team-card-compact .profile-body::-webkit-scrollbar-thumb {
+            background: #3e74a1;
+            border-radius: 10px;
+        }
+        .team-card-compact .profile-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+        .team-card-compact .profile-title a {
+            color: #ffffff !important;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .team-card-compact .profile-title a:hover {
+            color: #3e74a1 !important;
+        }
+        .team-card-compact .profile-designation {
+            color: #3e74a1;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.65rem;
+            letter-spacing: 0.5px;
+            margin: 2px 0 6px;
+        }
+        .team-card-compact .profile-content {
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.78rem;
+            text-align: justify;
+            line-height: 1.5;
+            max-height: 110px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        /* ---- Degree pseudo-elements ---- */
+        #tamrat2-id .profile-title a {
+            display: inline-block;
+            color: transparent !important;
+            position: relative;
+            text-transform: none !important;
+        }
+        #tamrat2-id .profile-title a::before {
+            content: "PhD";
+            display: block;
+            font-size: 11px;
+            margin-left: 180px;
+            position: relative;
+            top: 36px;
+            color: #ffffff;
+        }
+        #tamrat2-id .profile-title a::after {
+            content: "ASST. PROFESSOR";
+            display: block;
+            margin-top: -12px;
+            color: #3e74a1;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        #ruth2-id .profile-title a {
+            display: inline-block;
+            color: transparent !important;
+            position: relative;
+            text-transform: none !important;
+        }
+        #ruth2-id .profile-title a::before {
+            content: "JD";
+            display: block;
+            font-size: 12px;
+            margin-left: 220px;
+            position: relative;
+            top: 35px;
+            color: #ffffff;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .td-single-service-box {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 20px 16px;
+            }
+            .service-box-icon {
+                margin-bottom: 6px;
+            }
+            .team-card-compact .profile-image-card img {
+                height: 180px;
+            }
+            #tamrat2-id .profile-title a::before {
+                font-size: 8px;
+                margin-left: 100px;
+                top: 28px;
+            }
+            #ruth2-id .profile-title a::before {
+                font-size: 8px;
+                margin-left: 110px;
+                top: 28px;
+            }
+            .team-card-compact .profile-content {
+                max-height: 90px;
+                font-size: 0.72rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .team-card-compact .profile-image-card img {
+                height: 150px;
+            }
+            .team-card-compact .profile-title {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="page" class="site header-style-two">
+
+    <!-- ===== HEADER INJECTION POINT ===== -->
+    <div id="header-container"></div>
+
+    <!-- ==========================================================
+    MAIN CONTENT (no inline styles)
+    ========================================================== -->
+    <div id="primary" class="content-area page-content-area layout-full-width about-content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- ===== SECTION: About Us / Mission ===== -->
+                    <section class="mission-section">
+                        <div class="mission-header">
+                            <h6 class="subtitle">About Us</h6>
+                            <h2 class="title">&nbsp;</h2>
+                        </div>
+
+                        <div class="mission-icon-wrapper" style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+    <img src="http://tgmblawoffice.com/wp-content/uploads/2020/03/target.png" alt="Mission" style="display: block; margin: 0 auto 12px; max-width: 60px;" />
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.6rem; color: #0a1628; margin-bottom: 8px;">Our Misssion</h2>
+    <p style="color: #555; font-size: 1rem; line-height: 1.7; max-width: 600px; margin: 0 auto;">Our firm is built on a foundation of legal excellence and deep understanding of Ethiopian business landscapes.</p>
+</div>
+
+                     <div class="mission-text" style="text-align: justify; max-width: 850px; margin: 0 auto;">
+    <p>Teshome Gabre-Mariam Bokan Metasebia is a leading consultancy firm based in Addis Ababa, Ethiopia, specialising in business and investment advisory services for both new entrants in the Ethiopian market. For businesses already operating in Ethiopia, we offer a full suite of legal, tax, and accounting consultancy services tailored to local regulations and industry standards.</p>
+    <p>Our firm is grounded in a legacy of legal excellence, inspired by the work of the late Mr. Teshome Gabre-Mariam Bokan, a renowned Ethiopian legal figure whose vision continues to guide our commitment to legal integrity and professional services.</p>
+    <p>We are proud to carry forward the legacy of Mr. Teshome Gabre-Mariam Bokan, a leading and internationally recognised Ethiopian lawyer, whose expertise and integrity sets the standard of services provided by our firm.</p>
+</div>
+
+                        <div class="mission-signature" style="text-align: right; max-width: 300px; margin: 0 auto 30px;">
+                            <img src="http://tgmblawoffice.com/wp-content/uploads/2024/07/cropped-signature.png" alt="Signature" />
+                        </div>
+                    </section>
+
+                    <!-- ==========================================================
+                    LEGAL PRACTICE SECTION
+                    ========================================================== -->
+                    <section class="legal-practice-section">
+                        <!-- Headline -->
+                        <div class="legal-practice-heading">
+                            <h2>Tailored legal solutions that protect, empower and drive results.</h2>
+                        </div>
+
+                        <!-- Two Service Boxes Side by Side -->
+                        <div class="services-row">
+                            <!-- Intellectual Property -->
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="http://tgmblawoffice.com/wp-content/uploads/2025/05/intellectual-property.png" alt="Intellectual Property Icon" />
+                                </div>
+                                <h3 class="service-title">Intellectual Property</h3>
+                                <p class="service-desc">Protecting your ideas, creations and innovations with comprehensive intellectual property expertise.</p>
+                            </div>
+
+                            <!-- Foreign Investment -->
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <img src="http://tgmblawoffice.com/wp-content/uploads/2025/05/foreign-investment.png" alt="Foreign Investment Icon" />
+                                </div>
+                                <h3 class="service-title">Foreign Investment</h3>
+                                <p class="service-desc">Guiding you through every step of the foreign investment process with strategic insight and legal precision.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== SECTION: Meet Our Team ===== -->
+                    <section class="team-section-compact">
+                        <h2 class="section-title">Meet Our Team</h2>
+
+                        <!-- Row 1: Wossen, Tamrat, Tilahun -->
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2025/08/photo_2025-08-03_21-15-14-1.jpg" alt="Wossen Teshome Bokan" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">WOSSEN TESHOME BOKAN</a></h2>
+                                                <p class="profile-designation">Managing Director</p>
+                                                <p class="profile-content">Wossen Teshome Bokan is a leading intellectual property and corporate lawyer with a law degree from the University of London and over 25 years of experience.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact" id="tamrat2-id">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2024/07/senior-attorny-1024x683.jpg" alt="Tamrat Talegeta Tessema" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">TAMRAT TALEGETA TESSEMA</a></h2>
+                                                <p class="profile-designation">Senior Attorney</p>
+                                                <p class="profile-content">Tamrat Talegeta Tessema  is an Assistant Professor of Law of Arsi University and practices corporate law, M&A, litigation, tax, banking and insurance.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2024/07/litigation-lawyeer-e1746116012445.jpg" alt="Tilahun Mitiku Tesfaye" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">TILAHUN MITIKU TESFAYE</a></h2>
+                                                <p class="profile-designation">SENIOR Litigation Lawyer</p>
+                                                <p class="profile-content">Former presiding judge in civil, commercial, and penal divisions. Over 20 years of private practice experience.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Gemechu, Ruth, Daniel -->
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2024/07/corporate-lawyer.jpg" alt="Gemechu Merera Fana" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">GEMECHU MERERA FANA</a></h2>
+                                                <p class="profile-designation">Corporate Lawyer</p>
+                                                <p class="profile-content">Former judge at the Federal Tax Appeal Commission. Member of the National Technical Committee for the revision of the Commercial Code.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact" id="ruth2-id">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2024/07/cosultant-e1746115980244-1024x682.jpg" alt="Ruth Gizachew Guyasa" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title" ><a href="#">RUTH GIZACHEW GUYASA</a></h2>
+                                                <p class="profile-designation">Consultant</p>
+                                                <p class="profile-content">JD from University of Pittsburgh. Specialises in corporate, tax, and mergers & acquisitions.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2024/07/lawyerB.jpg" alt="Daniel Tariku Tamiru" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">DANIEL TARIKU TAMIRU</a></h2>
+                                                <p class="profile-designation">SENIOR ASSOCIATE</p>
+                                                <p class="profile-content">LLM in Business Law from Addis Ababa University. Expert in intellectual property, corporate, and investment law.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Tigist, Kumsa, Mulugeta -->
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2025/06/photo_2_2025-06-14_23-55-28-e1749934902242.jpg" alt="Tigist Dancha Tenecha" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">TIGIST DANCHA TENECHA</a></h2>
+                                                <p class="profile-designation">Associate Lawyer</p>
+                                                <p class="profile-content">LLB from Addis Ababa University. MBA from Yardstick International College. Dedicated to Intellectual Property and corporate law.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2025/05/photo_2019-12-24_16-29-41-2-e1746116330493.jpg" alt="Kumsa Bekele" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">KUMSA BEKELE</a></h2>
+                                                <p class="profile-designation">RECORD &amp; MARKETING MANAGER</p>
+                                                <p class="profile-content">BA in Sociology from California State University. Manages data, archives, and marketing for the firm.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2025/05/photo_2019-12-24_16-29-41-1024x682.jpg" alt="Mulugeta Teferi Fenta" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">MULUGETA TEFERI FENTA</a></h2>
+                                                <p class="profile-designation">Finance</p>
+                                                <p class="profile-content">Accountant and financial officer with over a decade of experience at the firm.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Meron, Danel, Tinsae, Behailu -->
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2025/05/photo_2019-12-24_16-29-44-2-e1746116491518.jpg" alt="Meron Mekonnen Hailu" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">MERON MEKONNEN HAILU</a></h2>
+                                                <p class="profile-designation">General Manager</p>
+                                                <p class="profile-content">18 years with the firm. Manages client relations and billing. Holds a degree in Business Management.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2025/05/photo_2019-12-24_16-29-41-3-1024x682.jpg" alt="Danel Andualem Silaynu" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">DANEL ANDUALEM SILAYNU</a></h2>
+                                                <p class="profile-designation">LIAISON OFFICER</p>
+                                                <p class="profile-content">Handles court filings, governmental office liaison, and ensures timely processing of paperwork.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2025/06/photo_4_2025-06-14_23-55-28-e1749934925940.jpg" alt="Tinsae Fikru Muluneh" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">TINSAE FIKRU MULUNEH</a></h2>
+                                                <p class="profile-designation">PARALEGAL</p>
+                                                <p class="profile-content">Trained legal assistant. Handles English-Amharic translations, IP formality verifications, and general lawyer support.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="team-card-compact">
+                                    <div class="profile-image-card">
+                                        <img src="http://tgmblawoffice.com/wp-content/uploads/2025/06/photo_3_2025-06-14_23-55-28-e1749934977629-1024x682.jpg" alt="Behailu Yilma Feleke" />
+                                        <div class="hover-area">
+                                            <div class="profile-body">
+                                                <h2 class="profile-title"><a href="#">BEHAILU YILMA FELEKE</a></h2>
+                                                <p class="profile-designation">PA &amp; LEAD MARKET INVESTIGATOR</p>
+                                                <p class="profile-content">Personal Assistant to the Managing Partner. Leads market investigation team with deep knowledge of Addis Ababa.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER INJECTION POINT ===== -->
+    <div id="footer-container"></div>
+
+</div><!-- #page -->
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
