@@ -88,7 +88,7 @@ const FOOTER_HTML = `
 
                 <!-- Column 2: Quick Links -->
                 <div class="footer-col footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.1rem;">Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>

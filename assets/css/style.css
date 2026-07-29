@@ -1817,3 +1817,247 @@ img {
         gap: 6px;
     }
 }
+/* Hero Motion Effect */
+.hero {
+    overflow: hidden; /* ensures the zoomed image stays inside */
+}
+
+.hero-background {
+    animation: kenburns 10s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+@keyframes kenburns {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.12);
+    }
+}
+/* ============================================================
+    MEET OUR TEAM – PREMIUM LAW FIRM STYLES
+    ============================================================ */
+
+.team-section {
+    padding: 80px 0;
+    background: #F8F9FB;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---- Section Header ---- */
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.pre-title {
+    display: block;
+    color: #C8A35F;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #0F1F38;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ---- 4‑Column Grid ---- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* ---- Team Card ---- */
+.team-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Card Image ---- */
+.card-image {
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+    background: #f0f2f5;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.team-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+/* ---- Overlay (slides up from bottom) ---- */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transform: translateY(100%);
+    background: linear-gradient(to top, #0F1F38 0%, rgba(15, 31, 56, 0.95) 40%, rgba(15, 31, 56, 0.6) 100%);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    color: #fff;
+}
+
+.team-card:hover .card-overlay {
+    transform: translateY(0);
+}
+
+/* ---- Overlay Content (fades in) ---- */
+.card-overlay-content {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease 0.1s;
+}
+
+.team-card:hover .card-overlay-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card-overlay-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card-overlay-content .position {
+    display: block;
+    color: #C8A35F;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.card-overlay-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ---- Card Body (always visible) ---- */
+.card-body {
+    padding: 20px 20px 24px;
+    text-align: center;
+    background: #ffffff;
+    flex: 1;
+}
+
+.card-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0F1F38;
+    margin-bottom: 2px;
+}
+
+.card-body .role {
+    color: #777;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ---- Keyboard Focus (Accessibility) ---- */
+.team-card:focus-visible {
+    outline: 3px solid #C8A35F;
+    outline-offset: 2px;
+}
+
+/* ============================================================
+    RESPONSIVE BREAKPOINTS
+    ============================================================ */
+
+/* Tablet: 2 cards per row */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    .card-image {
+        height: 280px;
+    }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 576px) {
+    .team-section {
+        padding: 50px 0;
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .card-image {
+        height: 260px;
+    }
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    .subtitle {
+        font-size: 0.95rem;
+        padding: 0 12px;
+    }
+    .card-overlay {
+        padding: 20px;
+    }
+    .card-overlay-content h3 {
+        font-size: 1rem;
+    }
+    .card-body h4 {
+        font-size: 1rem;
+    }
+}
