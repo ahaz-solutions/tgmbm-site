@@ -56,11 +56,11 @@ const HEADER_HTML = `
 const FOOTER_HTML = `
 <footer class="site-footer">
     <div class="footer-widget-area">
-        <div class="container">
-            <div class="footer-row-enhanced">
+        <div class="container footer-aligned">
+            <div class="footer-aligned-grid">
 
-                <!-- Column 1: Logo + Contact Info -->
-                <div class="footer-col footer-brand">
+                <!-- Column 1: Logo + Contact (left-aligned) -->
+                <div class="footer-col footer-col-left">
                     <div class="about-info-img">
                         <img src="https://tgmblawoffice.com/wp-content/uploads/2025/06/cropped-cropped-Logo-I-TGMB-04.png" alt="TGMB" />
                     </div>
@@ -76,7 +76,7 @@ const FOOTER_HTML = `
                             </li>
                             <li class="widget-address-desc">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="widget-addr-dsc">
+                                <div class="widget-addr-dsc" style="color:#000000;">
                                     8th Floor, HMM Building<br />
                                     Bole Road, Wello Sefer<br />
                                     Addis Ababa, Ethiopia
@@ -86,18 +86,20 @@ const FOOTER_HTML = `
                     </div>
                 </div>
 
-                <!-- Column 2: Quick Links -->
-                <div class="footer-col footer-links">
-                    <h4 style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 1.1rem;">Quick Links</h4>
+                <!-- Column 2: Quick Links (centered) -->
+                <div class="footer-col footer-col-center">
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Gallery -->
-                <div class="footer-col footer-gallery">
+                <!-- Column 3: Gallery (right-aligned) -->
+                <div class="footer-col footer-col-right">
+                    <h4>Gallery</h4>
                     <div class="gallery-grid">
                         <a href="#" class="gallery-item"><img src="https://tgmblawoffice.com/wp-content/uploads/2025/04/9.jpg" alt="Gallery" /></a>
                         <a href="#" class="gallery-item"><img src="https://tgmblawoffice.com/wp-content/uploads/2025/04/8.jpg" alt="Gallery" /></a>
@@ -115,8 +117,8 @@ const FOOTER_HTML = `
     <div class="footer-bottom">
         <div class="container">
             <div class="footer-bottom-inner">
-                <span>© TGMB 2025 | All Right Reserved</span>
-                <span>Powered by <strong><a href="https://ahaz.io">Ahaz solutions</strong></a></span>
+                <span style="color: #000000;">© TGMB 2025 | All Right Reserved</span>
+                <span style="color: #000000;">Powered by <strong><a href="#" style="color: #004079; text-decoration: none;">Ahaz solutions</a></strong></span>
             </div>
         </div>
     </div>
